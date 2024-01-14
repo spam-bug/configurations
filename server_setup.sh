@@ -42,6 +42,9 @@ sudo yum -y install gcc-c++ make
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
 sudo yum -y install nodejs
 
+# Install Git
+sudo yum -y install git
+
 # Display installed versions
 echo "Installed versions:"
 php --version
@@ -49,3 +52,4 @@ composer --version
 mysql --version
 node --version
 npm --version
+git --version
