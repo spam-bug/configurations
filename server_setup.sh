@@ -6,10 +6,10 @@ sudo yum -y update
 # Install EPEL repository for additional packages
 sudo yum -y install epel-release
 
-# Install PHP 8.1 or above
+# Install PHP 8.2
 sudo yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 sudo yum -y install yum-utils
-sudo yum-config-manager --enable remi-php81
+sudo yum-config-manager --enable remi-php82
 sudo yum -y install php
 
 # Install Composer
@@ -33,6 +33,9 @@ sudo yum clean all
 # Update the package list and reinstall the failing package
 sudo yum -y update
 sudo yum -y reinstall mysql-community-client-plugins-8.0.35-1.el7.x86_64
+
+# Run MySQL safe installation
+sudo mysql_secure_installation
 
 # Install Node.js and npm using NodeSource repository
 sudo yum -y install gcc-c++ make
